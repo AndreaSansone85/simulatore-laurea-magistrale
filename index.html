@@ -1,0 +1,56 @@
+<title>Simulatore voti di laurea</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<div class="app">
+  <header class="masthead">
+    <p class="kicker">Laurea magistrale in Psicologia</p>
+    <h1>Simulatore del voto di laurea</h1>
+    <p class="lede">Ogni cella mostra il voto finale di uno studente con la media della colonna e i punti tesi della riga. Cambia il profilo dei bonus e le regole per vedere dove scatta la proposta di lode. Il calcolo avviene nel browser e nessun dato viene inviato.</p>
+  </header>
+
+  <main class="pane">
+    <section class="panel" aria-labelledby="t-mappa">
+      <h2 id="t-mappa">Mappa del voto per media e punti tesi</h2>
+
+      <div class="controls">
+        <label class="inline">Regola per la lode
+          <select id="sel-regola"></select>
+        </label>
+        <label class="inline">Passo della media
+          <select id="sel-passo">
+            <option value="0.25">0,25</option>
+            <option value="0.5">0,5</option>
+            <option value="1">1</option>
+          </select>
+        </label>
+      </div>
+
+      <fieldset class="profilo">
+        <legend>Profilo dei bonus</legend>
+        <div class="checks" id="profilo-campi"></div>
+      </fieldset>
+
+      <div class="scroll" id="mappa-griglia"></div>
+      <ul class="legend" id="mappa-legenda"></ul>
+    </section>
+
+    <div class="split split-eq">
+      <section class="panel" aria-labelledby="t-regole">
+        <h2 id="t-regole">Regole in uso</h2>
+        <div id="regole-testo"></div>
+      </section>
+      <form class="panel" id="form-regole" autocomplete="off" onsubmit="return false" aria-label="Modifica delle regole"></form>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>Bozza di lavoro per la discussione tra colleghi. Le regole qui sono ipotesi e non il regolamento del corso di laurea.</p>
+  </footer>
+</div>
+
+<script src="rules.js"></script>
+<script src="app.js"></script>

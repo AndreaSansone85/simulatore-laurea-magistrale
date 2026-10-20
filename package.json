@@ -1,0 +1,10 @@
+{
+  "name": "simulatore-voti-laurea",
+  "version": "0.1.0",
+  "description": "Simulatore del voto di laurea magistrale e delle regole per la proposta di lode",
+  "private": true,
+  "scripts": {
+    "test": "node test/rules.test.js"
+  },
+  "license": "UNLICENSED"
+}
